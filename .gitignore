@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+
+# OS / editor
+.DS_Store
+.vscode/
+
+# Data outputs (we'll decide what to keep)
+data/*.csv
+# data/gm.db
