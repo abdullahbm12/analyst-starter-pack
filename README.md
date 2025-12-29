@@ -1,24 +1,33 @@
 # Healthcare Store Analyst Starter Pack (Synthetic)
 
-An analyst “starter pack” for a healthcare marketplace/store:
-- SQLite database
-- SQL question bank
-- Streamlit dashboard (KPIs, funnel, channel conversion, service margin)
-- Fully synthetic data (no PHI)
+A lightweight analytics dashboard simulating how an analyst at a healthcare marketplace
+might evaluate funnel performance, channel efficiency, and service-level margins.
 
-## What this answers
-- How is the funnel performing (sessions → bookings → completed)?
-- Which acquisition channels convert best?
-- Which services drive the most contribution margin?
-- What trends/risks show up (e.g., cancellation rate)?
+🔗 Live dashboard: https://analyst-starter-pack.streamlit.app/
+
+## What this shows
+- Session → quote → booking → completion funnel
+- Conversion efficiency by acquisition channel
+- Contribution margin by service line
+- Auto-generated insights an analyst could surface to leadership
+
+## Why this exists
+This project mirrors the type of exploratory and decision-support analysis
+an early-career analyst might do when partnering with operations, growth,
+and finance leaders at a healthcare marketplace.
+
+All data is **synthetic**, generated to reflect realistic healthcare workflows.
+
+## Stack
+- Python
+- SQLite
+- SQL (CTEs, aggregation, joins)
+- Pandas
+- Streamlit
+- Plotly
 
 ## How to run locally
 ```bash
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
 pip install -r requirements.txt
-
-python scripts/01_generate_data.py
-python scripts/02_build_sqlite.py
 streamlit run app.py
+
